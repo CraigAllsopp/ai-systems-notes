@@ -46,7 +46,7 @@ One gate requires that a change to existing code carries a **characterisation of
 
 A separate check caught a fake file path in a test fixture. I fixed it, and it then caught the same pattern **in the comment I'd written explaining why I'd avoided fake file paths**.
 
-That's the standard. Not "did the process start" but a check that is **able to come back negative, and does, against a motivated and well-informed operator who is actively trying to pass it.** I wrote those gates, I knew what they tested, I wanted through, and they still stopped me three times in one morning — twice for something real.
+That's the standard. Not "did the process start" but a check that is **able to come back negative, and does, against a motivated and well-informed operator who is actively trying to pass it.** I wrote those gates, I knew what they tested, I wanted through, and they still refused me four times in one morning — twice for something that genuinely mattered.
 
 The difference isn't cleverness. It's that a liveness check is looking at the *machinery*, and an outcome check is looking at the *product*. Machinery is easy to see and tells you almost nothing.
 
@@ -55,7 +55,7 @@ The difference isn't cleverness. It's that a liveness check is looking at the *m
 - **Absence of a detected failure is not evidence of safety.** It's evidence about your detectors. If nothing has gone red in a year, the honest first hypothesis is that your checks can't go red — not that nothing has gone wrong.
 - **Check the generator, not just the artefact's age.** A timestamp on a generated file tells you when it was written, not whether the writer is alive. The frozen dashboard was well inside its freshness window because it had been regenerated right up until the moment its process died.
 - **A check that has never failed is a check you haven't tested.** Deliberately break the thing and confirm the monitor notices. If you can't make it go red on demand, you don't know it can.
-- **Watch for adjacent questions.** Every one of the four failures was a check answering a *nearby* question and being read as answering the real one. When you write a monitor, write down the exact question it answers — then write down the question you actually care about, and look hard at the gap.
+- **Watch for adjacent questions.** Both failures above were a check answering a *nearby* question and being read as answering the real one. When you write a monitor, write down the exact question it answers — then write down the question you actually care about, and look hard at the gap.
 - **The ones you build for yourself are the most dangerous.** You know what the job is meant to do, so a green light confirms what you already believe. Independent checks matter most where you're most confident.
 
 I'll add the sting in the tail, because leaving it out would be the same failure this note describes: one of the two changes I promoted that morning shipped with a soak gate that only verifies the new code is *present* in the file, not that it *behaves*. It'll pass on its first run regardless. I flagged it as nominal in the change's own record rather than let a green tick imply more than it had earned — which is the least you can do when you've just spent a morning finding out what green is worth.
