@@ -11,6 +11,8 @@ I came to AI from 20 years delivering M&E and decarbonisation infrastructure —
 - **[Two-Stores Architecture](two-stores-architecture.md)** — raw verbatim capture + curated knowledge store, and why separating them beats one clever store. Lets you be wrong about curation safely.
 - **[The Observation-Target Model](observation-target-model.md)** — name a system by what it watches, not what it is. One engine, many targets — plug in, don't spawn.
 - **[Verification Discipline](verification-discipline.md)** — the four-state lifecycle (pending → in_progress → done → verified) and why "done" isn't "verified." The verifier must be independent of the doer. Pairs with [programme-parser](https://github.com/CraigAllsopp/programme-parser).
+- **[Model-Independent Discipline](model-independent-discipline.md)** — why your system shouldn't care which model is inside it. Swap the model and see what moves: if everything does, you don't have a system, you have a model with some wrapping.
+- **[Green Is Not a Guarantee](green-is-not-a-guarantee.md)** — a check that watches the *start* will report success forever. Three shapes of false-green, and what a check that can actually fail looks like. Pairs with [cron-logger](https://github.com/CraigAllsopp/cron-logger).
 
 ## Tools
 
