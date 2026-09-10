@@ -14,6 +14,16 @@ I came to AI from 20 years delivering M&E and decarbonisation infrastructure —
 - **[Model-Independent Discipline](model-independent-discipline.md)** — why your system shouldn't care which model is inside it. Swap the model and see what moves: if everything does, you don't have a system, you have a model with some wrapping.
 - **[Green Is Not a Guarantee](green-is-not-a-guarantee.md)** — a check that watches the *start* will report success forever. Three shapes of false-green, and what a check that can actually fail looks like. Pairs with [cron-logger](https://github.com/CraigAllsopp/cron-logger).
 
+## Papers
+
+Longer, measured write-ups. Where a note argued a case, these count instances and price them — including the ones where the instrument turned out to carry the defect it was hunting.
+
+- **[The gate ladder](papers/SUP-01-gate-ladder.md)** — what a machine-checkable "proven safe" looks like when you actually write one down, what each rung refuses, and the three ways a gate lies. Develops [Verification Discipline](verification-discipline.md).
+- **[The consequence loop](papers/SUP-02-consequence-loop.md)** — feedback architecture for an agent that asserts before it checks, and three failed attempts to automate the hardest part. Develops [Model-Independent Discipline](model-independent-discipline.md) and [Engineering Independence](engineering-independence.md).
+- **[The dry seam](papers/SUP-03-dry-seam.md)** — six producers writing to consumers that did not exist, what they cost, and the seventh seam that opened inside the fix for the other six. Develops [Green Is Not a Guarantee](green-is-not-a-guarantee.md).
+
+The notes above them are kept as written. They are what I believed at the time, and where a paper now disagrees with one, that disagreement is the point rather than something to tidy away.
+
 ## Tools
 
 These notes pair with small open-source tools that implement the patterns:
